@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://dy63npjsthedn"]
+
+[ext_resource type="Script" uid="uid://bjlry3c3gsptg" path="res://scripts/regular/gameplay/object_powerup.gd" id="1_v6ma1"]
+[ext_resource type="PackedScene" uid="uid://6127sqsbpoq" path="res://scenes/collectibles/cash_object.tscn" id="2_fh7jj"]
+[ext_resource type="Texture2D" uid="uid://creun6naqhwo6" path="res://power station tileset/4 Animated objects/Trap.png" id="2_o5qex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v8yf8"]
+size = Vector2(26, 43.5)
+
+[node name="object_powerup_cash" type="Node2D" unique_id=1830444502]
+texture_filter = 1
+scale = Vector2(5, 5)
+script = ExtResource("1_v6ma1")
+object_powerup_tag = "cash"
+object_instantiate = ExtResource("2_fh7jj")
+frame_increment = 8.0
+
+[node name="object_sprite" type="Sprite2D" parent="." unique_id=1731529816]
+position = Vector2(0, -24)
+texture = ExtResource("2_o5qex")
+hframes = 4
+
+[node name="object_hitbox" type="Area2D" parent="." unique_id=2045961776]
+position = Vector2(0, -20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="object_hitbox" unique_id=1639183911]
+position = Vector2(0, -1.75)
+shape = SubResource("RectangleShape2D_v8yf8")
+
+[connection signal="area_entered" from="object_hitbox" to="." method="_on_object_hitbox_area_entered"]

@@ -1,0 +1,49 @@
+[gd_scene format=3 uid="uid://cwun2g0yyxcma"]
+
+[ext_resource type="Script" uid="uid://ci14ona5ea6" path="res://scripts/regular/gameplay/effect_general.gd" id="1_yru0f"]
+[ext_resource type="Texture2D" uid="uid://bviq56mion5vr" path="res://sprites/effect sprites/particle_orb.png" id="2_xkg2a"]
+
+[sub_resource type="Curve" id="Curve_nwnh0"]
+_data = [Vector2(0, 0.8988764), 0.0, 0.0, 0, 0, Vector2(0.102273, 0.595506), 0.0, 0.0, 0, 0, Vector2(0.153409, 0.258427), 0.0, 0.0, 0, 0, Vector2(0.659091, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Gradient" id="Gradient_57orx"]
+colors = PackedColorArray(0.868867, 0.994091, 1, 1, 0.442911, 0.442911, 0.442911, 1)
+
+[node name="effect_general" type="Node2D" unique_id=2079813261]
+rotation = 3.14159
+scale = Vector2(48, 48)
+script = ExtResource("1_yru0f")
+particle_active = true
+delete_on_particle_end = true
+particle_one_shot = false
+particle_lifetime = 0.3
+particle_amount = 16
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=14727427]
+texture_filter = 1
+emitting = false
+amount = 50
+texture = ExtResource("2_xkg2a")
+lifetime = 0.5
+one_shot = true
+speed_scale = 0.66
+explosiveness = 1.0
+randomness = 1.0
+lifetime_randomness = 0.65
+emission_shape = 1
+emission_sphere_radius = 1.5
+particle_flag_align_y = true
+direction = Vector2(0, 1)
+spread = 180.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 100.0
+angular_velocity_max = 585.0
+damping_max = 47.917
+angle_min = -20.0
+angle_max = 38.0
+scale_amount_min = 0.2
+scale_amount_curve = SubResource("Curve_nwnh0")
+color_ramp = SubResource("Gradient_57orx")
+
+[node name="effect_sprite" type="Sprite2D" parent="." unique_id=864111160]

@@ -1,0 +1,356 @@
+[gd_scene format=3 uid="uid://cb8hq4cy75av4"]
+
+[ext_resource type="Script" uid="uid://olt0yfdygjvp" path="res://scripts/regular/entities/blitz.gd" id="1_5syhg"]
+[ext_resource type="PackedScene" uid="uid://iqs2wsvkcm0h" path="res://scenes/entities/entity_char2d_template.tscn" id="2_5syhg"]
+[ext_resource type="Texture2D" uid="uid://c5n0iiedcc8h7" path="res://sprites/entity sprites/player placeholder/adventurer-1.3-Sheet.png" id="2_741o3"]
+[ext_resource type="PackedScene" uid="uid://cwun2g0yyxcma" path="res://scenes/effects/cloud_burst_effect.tscn" id="2_d1ij0"]
+[ext_resource type="Texture2D" uid="uid://bviq56mion5vr" path="res://sprites/effect sprites/particle_orb.png" id="2_jgbio"]
+[ext_resource type="Texture2D" uid="uid://ofbggylchrh7" path="res://sprites/Icons/Icon_12.png" id="3_jgbio"]
+[ext_resource type="Texture2D" uid="uid://dvr067a1gato7" path="res://sprites/effect sprites/clock.png" id="4_gnop6"]
+[ext_resource type="Script" uid="uid://xbmshbhnvn1s" path="res://scripts/regular/gameplay/stamina.gd" id="4_hi575"]
+[ext_resource type="Script" uid="uid://bssshm8x125wh" path="res://scripts/regular/gameplay/cam.gd" id="5_0ah1b"]
+[ext_resource type="Script" uid="uid://ce85n4abman82" path="res://scripts/regular/gameplay/cam_point.gd" id="5_tn1sh"]
+[ext_resource type="Script" uid="uid://dqo8e8ldcowem" path="res://addons/virtual_joystick/virtual_joystick.gd" id="7_4ikbs"]
+[ext_resource type="Script" uid="uid://dvk33yu7jybet" path="res://scripts/regular/GUI elements/buttons.gd" id="7_nctni"]
+[ext_resource type="Texture2D" uid="uid://bvhxk81e5go2f" path="res://sprites/logos and UI/GUI/groundslam_button.png" id="8_tx0st"]
+[ext_resource type="Texture2D" uid="uid://cdbr88m1abtxu" path="res://sprites/logos and UI/GUI/dash_button.png" id="9_deej8"]
+[ext_resource type="Texture2D" uid="uid://dnel7cm5csg07" path="res://sprites/logos and UI/GUI/jump_button.png" id="10_jgbio"]
+[ext_resource type="Texture2D" uid="uid://bd61msigqmo88" path="res://sprites/Icons/Icon_23.png" id="11_deej8"]
+
+[sub_resource type="Animation" id="Animation_344ma"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="Animation" id="Animation_deej8"]
+resource_name = "dash"
+length = 0.45
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [77, 78]
+}
+
+[sub_resource type="Animation" id="Animation_4ay5c"]
+resource_name = "fall"
+length = 0.3
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [22, 23]
+}
+
+[sub_resource type="Animation" id="Animation_jgbio"]
+resource_name = "glide"
+length = 0.2
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.03333333),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [89]
+}
+
+[sub_resource type="Animation" id="Animation_741o3"]
+resource_name = "idle"
+length = 0.65
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.0333333, 0.1, 0.3, 0.46666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [3, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_4ikbs"]
+resource_name = "jump start"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.13333334, 0.43333334),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 1,
+"values": [15, 16, 17]
+}
+
+[sub_resource type="Animation" id="Animation_nctni"]
+resource_name = "roll"
+length = 0.48
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.099999994, 0.23333333, 0.36666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [18, 19, 20, 21]
+}
+
+[sub_resource type="Animation" id="Animation_yiwt6"]
+resource_name = "run"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(-0.16666667, 0.0333333, 0.26666665, 0.46666667, 0.6666667, 0.8666667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [8, 9, 10, 11, 12, 13]
+}
+
+[sub_resource type="Animation" id="Animation_tx0st"]
+resource_name = "wall slide"
+length = 0.35
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.16666667),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [79, 80]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_yiwt6"]
+_data = {
+&"RESET": SubResource("Animation_344ma"),
+&"dash": SubResource("Animation_deej8"),
+&"fall": SubResource("Animation_4ay5c"),
+&"glide": SubResource("Animation_jgbio"),
+&"idle": SubResource("Animation_741o3"),
+&"jump start": SubResource("Animation_4ikbs"),
+&"roll": SubResource("Animation_nctni"),
+&"run": SubResource("Animation_yiwt6"),
+&"wall slide": SubResource("Animation_tx0st")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_741o3"]
+size = Vector2(45.5, 91.5)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_deej8"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0ah1b"]
+size = Vector2(82, 114)
+
+[node name="blitz" type="CharacterBody2D" unique_id=551121956 node_paths=PackedStringArray("player_collision", "stamina_bar", "health_bar")]
+scale = Vector2(2, 2)
+input_pickable = true
+floor_stop_on_slope = false
+floor_max_angle = 1.0472
+floor_snap_length = 512.0
+safe_margin = 0.05
+script = ExtResource("1_5syhg")
+ground_slam_force = 7500.0
+player_collision = NodePath("collision_world")
+stamina_regen_speed_multiplier = 0.005
+stamina_bar = NodePath("CanvasLayer/stamina")
+attack_speed = 50000.0
+attack_range = 500.0
+attack_cooldown_time = 0.5
+attack_effect_scene = ExtResource("2_d1ij0")
+health_bar = NodePath("CanvasLayer/health")
+bullet_texture = ExtResource("2_jgbio")
+bullet_speed = 7000.0
+bullet_knockback = 4000.0
+bullet_size = Vector2(30, 30)
+bullet_lifetime = 5.0
+bullet_cooldown = 0.5
+aim_dot_texture = ExtResource("3_jgbio")
+dash_cooldown_clock_texture = ExtResource("4_gnop6")
+dash_clock_position = Vector2(90, 200)
+camera_node = NodePath("cam/cam")
+
+[node name="sprite" type="Sprite2D" parent="." unique_id=690712360]
+texture_filter = 1
+position = Vector2(3.874302e-06, -4.4703484e-06)
+scale = Vector2(3.1756756, 3.1756756)
+texture = ExtResource("2_741o3")
+offset = Vector2(0, -4.7)
+hframes = 8
+vframes = 12
+
+[node name="animation" type="AnimationPlayer" parent="sprite" unique_id=895236688]
+libraries/ = SubResource("AnimationLibrary_yiwt6")
+
+[node name="collision_world" type="CollisionShape2D" parent="." unique_id=1925824250]
+position = Vector2(-0.75, -5.25)
+shape = SubResource("RectangleShape2D_741o3")
+
+[node name="entity_sprite_handler" parent="." unique_id=1634566380 node_paths=PackedStringArray("anim_unit", "sprite_unit") instance=ExtResource("2_5syhg")]
+anim_unit = NodePath("../sprite/animation")
+sprite_unit = NodePath("../sprite")
+
+[node name="timers" type="Node" parent="." unique_id=1506428241]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1346593605]
+
+[node name="stamina" type="ProgressBar" parent="CanvasLayer" unique_id=1896126988]
+offset_left = 41.0
+offset_top = 79.0
+offset_right = 363.0
+offset_bottom = 106.0
+max_value = 300.0
+show_percentage = false
+script = ExtResource("4_hi575")
+segment_gap = 3.0
+colors = [Color(0.491519, 0.8826, 0.933986, 1), Color(0.49019608, 0.88235295, 0.93333334, 1), Color(0.490196, 0.882353, 0.933333, 1)]
+outline_enabled = false
+outline_color = Color(0.49019608, 1, 0.93333334, 1)
+outline_width = 6.0
+flash_duration = 1.0
+
+[node name="health" type="ProgressBar" parent="CanvasLayer" unique_id=247682814]
+offset_left = 41.0
+offset_top = 42.0
+offset_right = 363.0
+offset_bottom = 69.0
+max_value = 300.0
+show_percentage = false
+script = ExtResource("4_hi575")
+segments = 1
+segment_gap = 0.0
+colors = [Color(0.4878118, 0.91748655, 0.6325977, 1)]
+outline_color = Color(0.4862745, 1, 0.6313726, 1)
+outline_width = 6.0
+flash_duration = 1.0
+
+[node name="VirtualJoystick" type="Control" parent="CanvasLayer" unique_id=72726506]
+visible = false
+modulate = Color(1, 1, 1, 0)
+z_index = 100
+z_as_relative = false
+texture_filter = 1
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+pivot_offset = Vector2(109.25, 109.25)
+mouse_filter = 1
+script = ExtResource("7_4ikbs")
+deadzone = 0.0
+metadata/_custom_type_script = "uid://dqo8e8ldcowem"
+
+[node name="buttons" type="Node2D" parent="CanvasLayer" unique_id=1829512922]
+visible = false
+modulate = Color(1, 1, 1, 0.43137255)
+script = ExtResource("7_nctni")
+ground_slam_texture = ExtResource("8_tx0st")
+ground_slam_pressed_texture = ExtResource("8_tx0st")
+dash_texture = ExtResource("9_deej8")
+dash_pressed_texture = ExtResource("9_deej8")
+jump_texture = ExtResource("10_jgbio")
+jump_pressed_texture = ExtResource("10_jgbio")
+triangle_center = Vector2(1438, 500)
+button_spacing = 150.0
+
+[node name="Control" type="Control" parent="CanvasLayer" unique_id=1237181415]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="pause_" type="Button" parent="CanvasLayer/Control" unique_id=133811906]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_top = -4.227
+anchor_right = 7.162
+anchor_bottom = 1.406
+offset_left = 1823.0
+offset_top = 201.08002
+offset_right = 1560.52
+offset_bottom = -0.24000168
+scale = Vector2(3.374999, 3.6249998)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_deej8")
+icon = ExtResource("11_deej8")
+
+[node name="entity_hitbox" type="Area2D" parent="." unique_id=663719770]
+collision_priority = 64.0
+priority = -3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entity_hitbox" unique_id=1548957332]
+position = Vector2(-1, -6)
+shape = SubResource("RectangleShape2D_0ah1b")
+one_way_collision_margin = 128.0
+
+[node name="cam" type="Node2D" parent="." unique_id=1262917962]
+script = ExtResource("5_tn1sh")
+offset_view_tiles = 1
+
+[node name="cam" type="Camera2D" parent="cam" unique_id=1174937384]
+zoom = Vector2(0.5, 0.5)
+process_callback = 0
+limit_smoothed = true
+position_smoothing_enabled = true
+position_smoothing_speed = 25.0
+script = ExtResource("5_0ah1b")
+max_lean_angle = 10.0
+lean_sensitivity = 2.0
+max_shake = 150.0
+
+[node name="effect_spawn_location" type="Node2D" parent="." unique_id=1792403536]
+position = Vector2(0, 35)
+
+[node name="sound_effects" type="AudioStreamPlayer" parent="." unique_id=662584156]
+max_polyphony = 10
+bus = &"SFX"
+
+[connection signal="pressed" from="CanvasLayer/Control/pause_" to="." method="_on_pause_pressed"]
+[connection signal="area_entered" from="entity_hitbox" to="." method="_on_entity_hitbox_area_entered"]
+[connection signal="area_exited" from="entity_hitbox" to="." method="_on_entity_hitbox_area_exited"]

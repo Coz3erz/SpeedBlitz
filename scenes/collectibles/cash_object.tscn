@@ -1,0 +1,44 @@
+[gd_scene format=3 uid="uid://6127sqsbpoq"]
+
+[ext_resource type="Script" uid="uid://dox4depe2d4j4" path="res://scripts/regular/gameplay/collectible_object.gd" id="1_rjago"]
+[ext_resource type="Texture2D" uid="uid://budi3p5ydvibw" path="res://Free Industrial Zone Tileset/4 Animated objects/Money.png" id="2_4n1co"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gpca7"]
+size = Vector2(24, 24)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gmoh7"]
+size = Vector2(18.8, 19.2)
+
+[node name="cash" type="RigidBody2D" unique_id=810615844]
+collision_layer = 2
+collision_mask = 2
+
+[node name="collectible_object" type="Area2D" parent="." unique_id=1835912709]
+script = ExtResource("1_rjago")
+sprite_texture = ExtResource("2_4n1co")
+h_frames = 6
+object_tag = "cash"
+object_properties_array = [100]
+float_range = 25
+frame_increment = 5.0
+
+[node name="collision" type="CollisionShape2D" parent="collectible_object" unique_id=684506885]
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_gpca7")
+
+[node name="item_sprite" type="Sprite2D" parent="collectible_object" unique_id=1169443869]
+texture_filter = 1
+scale = Vector2(5, 5)
+
+[node name="Camera2D" type="Camera2D" parent="collectible_object" unique_id=107399366]
+scale = Vector2(5, 5)
+zoom = Vector2(5, 5)
+position_smoothing_enabled = true
+position_smoothing_speed = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1801944754]
+position = Vector2(2.3841858e-07, -2.3841858e-07)
+scale = Vector2(5, 5)
+shape = SubResource("RectangleShape2D_gmoh7")
+
+[connection signal="area_entered" from="collectible_object" to="collectible_object" method="_on_area_entered"]

@@ -1,0 +1,76 @@
+[gd_scene format=4 uid="uid://ccb5pfevm7swo"]
+
+[ext_resource type="Script" uid="uid://7u1c3r70ad5w" path="res://scripts/regular/utility/level_general.gd" id="1_lgguw"]
+[ext_resource type="Script" uid="uid://duiywe5q0a0dj" path="res://scripts/regular/utility/parallax_background.gd" id="2_jprdt"]
+[ext_resource type="Texture2D" uid="uid://ciicgfvldajlu" path="res://Free Industrial Zone Tileset/2 Background/1.png" id="3_ps2vj"]
+[ext_resource type="Texture2D" uid="uid://bogpo86513cct" path="res://Free Industrial Zone Tileset/2 Background/2.png" id="4_sbmf2"]
+[ext_resource type="Texture2D" uid="uid://dsnrdp4yvc2gt" path="res://Free Industrial Zone Tileset/2 Background/3.png" id="5_1xax6"]
+[ext_resource type="Texture2D" uid="uid://dmyymwnsyvb4r" path="res://Free Industrial Zone Tileset/2 Background/_3.png" id="6_g7tkf"]
+[ext_resource type="Texture2D" uid="uid://bhj74cqhjbbvn" path="res://Free Industrial Zone Tileset/2 Background/4.png" id="7_4fww7"]
+[ext_resource type="Texture2D" uid="uid://dn3pvn2avuoyp" path="res://Free Industrial Zone Tileset/2 Background/5.png" id="8_gvm5i"]
+[ext_resource type="Texture2D" uid="uid://r76v0oqjfb2j" path="res://power station tileset/1 Tiles/Tile_56.png" id="9_jrfo0"]
+[ext_resource type="Texture2D" uid="uid://boq8tmosyjkh3" path="res://sprites/city background/4.png" id="10_db1r7"]
+[ext_resource type="PackedScene" uid="uid://cg6dah7i7gk5v" path="res://scenes/utility scenes/pause.tscn" id="11_6gwlt"]
+[ext_resource type="PackedScene" uid="uid://cb8hq4cy75av4" path="res://scenes/entities/blitz.tscn" id="12_c2nc4"]
+[ext_resource type="AudioStream" uid="uid://qwegb1h1ex2m" path="res://sounds/main themes/crystal_tokyo.mp3" id="13_vhxpm"]
+[ext_resource type="TileSet" uid="uid://c1hkh8gscx8s0" path="res://other/tileset.tres" id="14_jprdt"]
+
+[node name="level_choose_general" type="Node2D" unique_id=2923122 node_paths=PackedStringArray("background_music_stream_player")]
+script = ExtResource("1_lgguw")
+background_music_stream_player = NodePath("main_sound")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=2038356762]
+scroll_base_scale = Vector2(10, 10)
+script = ExtResource("2_jprdt")
+layer_textures = Array[Texture2D]([ExtResource("3_ps2vj"), ExtResource("4_sbmf2"), ExtResource("5_1xax6"), ExtResource("6_g7tkf"), ExtResource("7_4fww7"), ExtResource("8_gvm5i")])
+motion_scales = Array[Vector2]([Vector2(1, 1), Vector2(0.01, 0.015), Vector2(0.02, 0.015), Vector2(0.03, 0.015), Vector2(0.04, 0.015), Vector2(0.07, 0.015)])
+vertical_layers = Array[bool]([true, false, false, false, false, false, false])
+ground_layers = Array[bool]([false, true, true, true, true, true, true])
+flip_h = Array[bool]([false, true, false, false, false])
+flip_v = Array[bool]([false, true, false, false, false, false])
+layer_offsets = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)])
+layer_scales = Array[Vector2]([Vector2(1, 1), Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1.3, 1.3), Vector2(1.5, 1.5), Vector2(2, 2)])
+enable_void = true
+void_texture = ExtResource("9_jrfo0")
+void_color = Color(1, 1, 1, 1)
+void_height = 3000.0
+void_below_layer = 5
+void_motion_scale = Vector2(0.1, 0.015)
+void_render_below_layer = 1
+void_scale = Vector2(0.3, 0.3)
+void_layer_textures = Array[Texture2D]([ExtResource("10_db1r7")])
+void_layer_below_layers = Array[int]([5])
+void_layer_motion_scales = Array[Vector2]([Vector2(0.09, 0.015)])
+void_layer_flip_h = Array[bool]([false])
+void_layer_flip_v = Array[bool]([false])
+void_layer_vertical_mirror = Array[bool]([true])
+void_layer_render_below_layers = Array[int]([6])
+void_layer_offsets = Array[Vector2]([Vector2(0, -100)])
+void_layer_scales = Array[Vector2]([Vector2(1, 1)])
+
+[node name="pause" parent="." unique_id=1250592798 instance=ExtResource("11_6gwlt")]
+
+[node name="blitz" parent="." unique_id=1740794090 instance=ExtResource("12_c2nc4")]
+position = Vector2(1962, -104)
+
+[node name="main_sound" type="AudioStreamPlayer" parent="." unique_id=1990091755]
+process_mode = 3
+stream = ExtResource("13_vhxpm")
+max_polyphony = 5
+bus = &"Music"
+playback_type = 1
+parameters/looping = true
+
+[node name="background" type="TileMapLayer" parent="." unique_id=572763244]
+z_index = -1
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(2.5, 2.5)
+tile_set = ExtResource("14_jprdt")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2029963328]
+z_index = -1
+texture_filter = 1
+position = Vector2(2880, 0)
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AAD2/wAAAgACAAUAAAD2/wEAAgACAAUAAAD3/wAAAgACAAUAAAD3/wEAAgACAAUAAAD4/wAAAgACAAUAAAD4/wEAAgACAAUAAAD5/wAAAgACAAUAAAD5/wEAAgACAAUAAAD6/wAAAgACAAUAAAD6/wEAAgACAAUAAAD7/wAAAgACAAUAAAD7/wEAAgACAAUAAAD8/wAAAgACAAUAAAD8/wEAAgACAAUAAAD9/wAAAgACAAUAAAD9/wEAAgACAAUAAAD+/wAAAgACAAUAAAD+/wEAAgACAAUAAAD//wAAAgACAAUAAAD//wEAAgACAAUAAAAAAAAAAgACAAUAAAAAAAEAAgACAAUAAAABAAAAAgACAAUAAAABAAEAAgACAAUAAAACAAAAAgACAAUAAAACAAEAAgACAAUAAAADAAAAAgACAAUAAAADAAEAAgACAAUAAAA=")
+tile_set = ExtResource("14_jprdt")

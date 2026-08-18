@@ -1,0 +1,31 @@
+[gd_scene format=3 uid="uid://bpoj54sfas7i3"]
+
+[ext_resource type="Script" uid="uid://qxtns01ifbd" path="res://scripts/regular/gameplay/nextlevel.gd" id="1_dhvar"]
+
+[sub_resource type="DPITexture" id="DPITexture_c5qis"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ityjr"]
+size = Vector2(21.333332, 15.028763)
+
+[node name="next_level" type="Sprite2D" unique_id=1415938361]
+z_index = 100
+texture_filter = 1
+texture_repeat = 2
+rotation = 3.14159
+scale = Vector2(0.25, 0.255)
+texture = SubResource("DPITexture_c5qis")
+region_enabled = true
+region_rect = Rect2(512, -512, 128, 128)
+region_filter_clip_enabled = true
+script = ExtResource("1_dhvar")
+
+[node name="next_level" type="Area2D" parent="." unique_id=709356430]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="next_level" unique_id=1714147152]
+texture_filter = 1
+position = Vector2(-0.00015449486, -0.00014398649)
+scale = Vector2(6, 8.35)
+shape = SubResource("RectangleShape2D_ityjr")
+
+[connection signal="area_entered" from="next_level" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="next_level" to="." method="_on_jumppad_area_entered"]

@@ -1,0 +1,111 @@
+[gd_scene format=3 uid="uid://dues4fugvr1dm"]
+
+[ext_resource type="Script" uid="uid://xcj0hcuk2qer" path="res://scripts/regular/internal scripts/scene_manager.gd" id="1_u60k5"]
+[ext_resource type="Shader" uid="uid://j50aiwahakyt" path="res://scripts/shaders/transitions/fade.gdshader" id="2_g8y7s"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_skwps"]
+shader = ExtResource("2_g8y7s")
+shader_parameter/progress = 0.0
+shader_parameter/reverse = false
+shader_parameter/numberOftiles = Vector2(15, 8.4375)
+
+[sub_resource type="Animation" id="Animation_g8y7s"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [0.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/reverse")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_u60k5"]
+resource_name = "fade"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/reverse")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_skwps"]
+resource_name = "fade_out"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ColorRect:material:shader_parameter/progress")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [0.0, 1.0]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ColorRect:material:shader_parameter/reverse")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_skwps"]
+_data = {
+&"RESET": SubResource("Animation_g8y7s"),
+&"fade_in": SubResource("Animation_u60k5"),
+&"fade_out": SubResource("Animation_skwps")
+}
+
+[node name="scene_manager" type="CanvasLayer" unique_id=170104321]
+layer = -3
+script = ExtResource("1_u60k5")
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=1664452491]
+material = SubResource("ShaderMaterial_skwps")
+offset_right = 2004.0
+offset_bottom = 1115.0
+color = Color(0, 0, 0, 1)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=439922204]
+libraries/ = SubResource("AnimationLibrary_skwps")

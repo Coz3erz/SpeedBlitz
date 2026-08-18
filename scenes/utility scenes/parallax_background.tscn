@@ -1,0 +1,17 @@
+[gd_scene load_steps=7 format=3 uid="uid://welr06m5ygql"]
+
+[ext_resource type="Script" uid="uid://duiywe5q0a0dj" path="res://scripts/regular/utility/parallax_background.gd" id="1_kwhg4"]
+[ext_resource type="Texture2D" uid="uid://ciicgfvldajlu" path="res://Free Industrial Zone Tileset/2 Background/1.png" id="2_hy12d"]
+[ext_resource type="Texture2D" uid="uid://bogpo86513cct" path="res://Free Industrial Zone Tileset/2 Background/2.png" id="3_m5fgl"]
+[ext_resource type="Texture2D" uid="uid://dsnrdp4yvc2gt" path="res://Free Industrial Zone Tileset/2 Background/3.png" id="4_4srxt"]
+[ext_resource type="Texture2D" uid="uid://bhj74cqhjbbvn" path="res://Free Industrial Zone Tileset/2 Background/4.png" id="5_s063p"]
+[ext_resource type="Texture2D" uid="uid://dn3pvn2avuoyp" path="res://Free Industrial Zone Tileset/2 Background/5.png" id="6_fe61w"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+scroll_base_scale = Vector2(10, 10)
+script = ExtResource("1_kwhg4")
+layer_textures = Array[Texture2D]([ExtResource("2_hy12d"), ExtResource("3_m5fgl"), ExtResource("4_4srxt"), ExtResource("5_s063p"), ExtResource("6_fe61w")])
+motion_scales = Array[Vector2]([Vector2(1, 1), Vector2(0.01, 0.1), Vector2(0.01, 0.1), Vector2(0.01, 1), Vector2(0.01, 0.1)])
+vertical_layers = Array[bool]([true, false, false, false, false])
+flip_h = Array[bool]([false, false, false, false, false])
+flip_v = Array[bool]([false, true, false, false, false])

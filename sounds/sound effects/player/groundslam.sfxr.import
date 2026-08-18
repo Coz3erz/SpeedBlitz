@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://d23wuug7dyrjt"
+path="res://.godot/imported/groundslam.sfxr-3563f331d66644453772d972401d4357.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/player/groundslam.sfxr"
+dest_files=["res://.godot/imported/groundslam.sfxr-3563f331d66644453772d972401d4357.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

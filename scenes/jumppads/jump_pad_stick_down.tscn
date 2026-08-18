@@ -1,0 +1,41 @@
+[gd_scene load_steps=5 format=3 uid="uid://cu11e32680c27"]
+
+[ext_resource type="Texture2D" uid="uid://bm4qtpcjtwevg" path="res://sprites/object sprites/reverse_left.png" id="1_5ulme"]
+[ext_resource type="Script" uid="uid://c8xmtvgwln4g4" path="res://scripts/regular/gameplay/jump_pad_stick.gd" id="2_ywocv"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kabc6"]
+size = Vector2(8, 7.8125)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ityjr"]
+size = Vector2(16, 16)
+
+[node name="jump_pad" type="Sprite2D"]
+texture_filter = 1
+texture_repeat = 2
+rotation = 3.14159
+scale = Vector2(0.25, 0.256)
+texture = ExtResource("1_5ulme")
+region_enabled = true
+region_rect = Rect2(512, -512, 128, 128)
+region_filter_clip_enabled = true
+script = ExtResource("2_ywocv")
+tile_combination_size = Vector2(1, 1)
+launch_size = Vector2(0.8, 0.5)
+launch_mult_tile_pos_change = Vector2(0, -0.35)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+scale = Vector2(16, 16)
+shape = SubResource("RectangleShape2D_kabc6")
+
+[node name="jumppad_stick" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="jumppad_stick"]
+texture_filter = 1
+position = Vector2(-1.43051e-06, -38.85)
+scale = Vector2(6, 8.35)
+shape = SubResource("RectangleShape2D_ityjr")
+
+[connection signal="area_entered" from="jumppad_stick" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_exited" from="jumppad_stick" to="." method="_on_jumppad_area_exited"]

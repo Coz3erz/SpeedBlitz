@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://cveaf2j1uay0w"
+path="res://.godot/imported/splash1.sfxr-532a6d1fdfc841788289bab611253770.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/map/splash1.sfxr"
+dest_files=["res://.godot/imported/splash1.sfxr-532a6d1fdfc841788289bab611253770.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

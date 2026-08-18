@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://bic304cex6hpe"
+path="res://.godot/imported/slip.sfxr-ba30e0dc93e22522dc1b5b158a936645.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/player/slip.sfxr"
+dest_files=["res://.godot/imported/slip.sfxr-ba30e0dc93e22522dc1b5b158a936645.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

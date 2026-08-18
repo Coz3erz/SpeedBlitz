@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://bqe4i5w5hdx3t"
+path="res://.godot/imported/cannon.sfxr-47bab82c38505c9bff8f78192846fb3e.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/player/cannon.sfxr"
+dest_files=["res://.godot/imported/cannon.sfxr-47bab82c38505c9bff8f78192846fb3e.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

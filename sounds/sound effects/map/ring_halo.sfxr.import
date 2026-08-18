@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://c6s2elvht0m7o"
+path="res://.godot/imported/ring_halo.sfxr-96b1e9c00702f863f80188f766c92b9c.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/map/ring_halo.sfxr"
+dest_files=["res://.godot/imported/ring_halo.sfxr-96b1e9c00702f863f80188f766c92b9c.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

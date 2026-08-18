@@ -1,0 +1,55 @@
+[gd_scene load_steps=6 format=3 uid="uid://c0wv8m3wr6ku8"]
+
+[ext_resource type="Script" uid="uid://ci14ona5ea6" path="res://scripts/regular/gameplay/effect_general.gd" id="1_33ti8"]
+[ext_resource type="Texture2D" uid="uid://bviq56mion5vr" path="res://sprites/effect sprites/particle_orb.png" id="2_eosmf"]
+
+[sub_resource type="Curve" id="Curve_nwnh0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.102273, 0.595506), 0.0, 0.0, 0, 0, Vector2(0.153409, 0.258427), 0.0, 0.0, 0, 0, Vector2(0.659091, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_33ti8"]
+_data = [Vector2(0.087209314, 1), 0.0, 0.0, 0, 0, Vector2(0.4011628, 1), 0.0, 0.0, 0, 0, Vector2(0.511628, 0), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_57orx"]
+colors = PackedColorArray(0.868867, 0.994091, 1, 1, 0.442911, 0.442911, 0.442911, 1)
+
+[node name="dash_effect" type="Node2D"]
+texture_filter = 1
+scale = Vector2(4, 4)
+script = ExtResource("1_33ti8")
+particle_active = true
+delete_on_particle_end = true
+particle_lifetime = 0.3
+particle_amount = 16
+scale_over_time = Vector2(2, 1)
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+modulate = Color(0.9459776, 0.9459776, 0.9459776, 0.21960784)
+emitting = false
+amount = 64
+texture = ExtResource("2_eosmf")
+lifetime = 0.15000000000000002
+one_shot = true
+speed_scale = 0.75
+explosiveness = 1.0
+randomness = 1.0
+use_fixed_seed = true
+seed = 1031119115
+emission_shape = 1
+emission_sphere_radius = 33.0
+particle_flag_align_y = true
+spread = 0.0
+gravity = Vector2(0, 0)
+initial_velocity_max = 800.0
+angle_min = -20.0
+angle_max = 38.0
+scale_amount_min = 0.2
+scale_amount_max = 0.7
+scale_amount_curve = SubResource("Curve_nwnh0")
+split_scale = true
+scale_curve_x = SubResource("Curve_33ti8")
+scale_curve_y = null
+color_ramp = SubResource("Gradient_57orx")
+
+[node name="effect_sprite" type="Sprite2D" parent="."]

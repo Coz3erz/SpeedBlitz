@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dnxkepnc5m5q2"]
+
+[ext_resource type="Script" uid="uid://pnhpwdcamokn" path="res://scripts/regular/GUI elements/options.gd" id="1_emwhe"]
+[ext_resource type="StyleBox" uid="uid://cwo4jwqdxqgew" path="res://other/GUI_default.tres" id="2_ah0b0"]
+[ext_resource type="FontFile" uid="uid://cp0sso5a8wp3g" path="res://other/CyberpunkCraftpixPixel.otf" id="3_hrxq8"]
+[ext_resource type="Texture2D" uid="uid://be2eqcw3ld65e" path="res://sprites/Icons/Icon_36.png" id="4_d0fsv"]
+[ext_resource type="Texture2D" uid="uid://cndx60hkjroaq" path="res://sprites/Icons/Icon_35.png" id="5_asu6u"]
+
+[node name="OptionsMenu" type="CanvasLayer" unique_id=567286451]
+layer = 5
+script = ExtResource("1_emwhe")
+background_style = ExtResource("2_ah0b0")
+button_style = ExtResource("2_ah0b0")
+button_hover_style = ExtResource("2_ah0b0")
+button_pressed_style = ExtResource("2_ah0b0")
+label_font = ExtResource("3_hrxq8")
+button_font = ExtResource("3_hrxq8")
+font_size = 44
+title_font_size = 44
+dialog_font_size = 24
+checkbox_scale = 18.0
+checkbox_texture_checked = ExtResource("4_d0fsv")
+checkbox_texture_unchecked = ExtResource("5_asu6u")
+content_width = 1850
+input_button_width = 500

@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dk6g2t3p34ij4"]
+
+[ext_resource type="Script" uid="uid://cafyauuqtvrb4" path="res://scripts/regular/utility/level_generator.gd" id="1_2snrc"]
+
+[node name="gen" type="Node2D"]
+script = ExtResource("1_2snrc")
+
+[node name="Chunks" type="Node2D" parent="."]

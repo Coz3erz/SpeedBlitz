@@ -1,0 +1,17 @@
+[remap]
+
+importer="com.timothyqiu.gdfxr.importer"
+type="AudioStreamWAV"
+uid="uid://ct01ioe6660ry"
+path="res://.godot/imported/dash.sfxr-dcc880c7aba767a0452230501f3ccad2.sample"
+
+[deps]
+
+source_file="res://sounds/sound effects/player/dash.sfxr"
+dest_files=["res://.godot/imported/dash.sfxr-dcc880c7aba767a0452230501f3ccad2.sample"]
+
+[params]
+
+loop=false
+bit_depth=0
+sample_rate=0

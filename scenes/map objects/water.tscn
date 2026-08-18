@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://bxnnubl8kmeb3"]
+
+[ext_resource type="Script" uid="uid://2bwtgtbe26jm" path="res://scripts/regular/gameplay/water.gd" id="1_swglf"]
+
+[node name="water" type="Node2D" unique_id=1251729004]
+z_index = -2
+script = ExtResource("1_swglf")

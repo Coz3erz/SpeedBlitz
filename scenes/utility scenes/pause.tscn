@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://cg6dah7i7gk5v"]
+
+[ext_resource type="Script" uid="uid://doqxopkm64at4" path="res://scripts/regular/GUI elements/pause.gd" id="1_kur5h"]
+[ext_resource type="StyleBox" uid="uid://cwo4jwqdxqgew" path="res://other/GUI_default.tres" id="2_rfnuq"]
+[ext_resource type="FontFile" uid="uid://cp0sso5a8wp3g" path="res://other/CyberpunkCraftpixPixel.otf" id="3_rfnuq"]
+[ext_resource type="PackedScene" uid="uid://dnxkepnc5m5q2" path="res://scenes/utility scenes/options.tscn" id="4_7dnnk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7dnnk"]
+
+[node name="pause" type="CanvasLayer" unique_id=869752974]
+layer = 5
+script = ExtResource("1_kur5h")
+background_style = SubResource("StyleBoxFlat_7dnnk")
+button_style = ExtResource("2_rfnuq")
+button_hover_style = ExtResource("2_rfnuq")
+button_pressed_style = ExtResource("2_rfnuq")
+font = ExtResource("3_rfnuq")
+font_size = 96
+scale_multiplier = 0.7
+
+[node name="OptionsMenu" parent="." unique_id=783570749 instance=ExtResource("4_7dnnk")]

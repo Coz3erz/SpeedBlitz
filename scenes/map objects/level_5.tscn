@@ -1,0 +1,84 @@
+[gd_scene format=4 uid="uid://dmqy2bpink6yh"]
+
+[ext_resource type="Script" uid="uid://7u1c3r70ad5w" path="res://scripts/regular/utility/level_general.gd" id="1_es4bw"]
+[ext_resource type="Script" uid="uid://duiywe5q0a0dj" path="res://scripts/regular/utility/parallax_background.gd" id="2_3p7yf"]
+[ext_resource type="Texture2D" uid="uid://ciicgfvldajlu" path="res://Free Industrial Zone Tileset/2 Background/1.png" id="3_vv073"]
+[ext_resource type="Texture2D" uid="uid://bogpo86513cct" path="res://Free Industrial Zone Tileset/2 Background/2.png" id="4_t3b6s"]
+[ext_resource type="Texture2D" uid="uid://dsnrdp4yvc2gt" path="res://Free Industrial Zone Tileset/2 Background/3.png" id="5_xqb6r"]
+[ext_resource type="Texture2D" uid="uid://dmyymwnsyvb4r" path="res://Free Industrial Zone Tileset/2 Background/_3.png" id="6_wx3r1"]
+[ext_resource type="Texture2D" uid="uid://bhj74cqhjbbvn" path="res://Free Industrial Zone Tileset/2 Background/4.png" id="7_nvf7e"]
+[ext_resource type="Texture2D" uid="uid://dn3pvn2avuoyp" path="res://Free Industrial Zone Tileset/2 Background/5.png" id="8_8gdro"]
+[ext_resource type="Texture2D" uid="uid://r76v0oqjfb2j" path="res://power station tileset/1 Tiles/Tile_56.png" id="9_u5co3"]
+[ext_resource type="Texture2D" uid="uid://boq8tmosyjkh3" path="res://sprites/city background/4.png" id="10_wryk2"]
+[ext_resource type="PackedScene" uid="uid://cg6dah7i7gk5v" path="res://scenes/utility scenes/pause.tscn" id="11_r56l7"]
+[ext_resource type="PackedScene" uid="uid://cb8hq4cy75av4" path="res://scenes/entities/blitz.tscn" id="12_hwj6q"]
+[ext_resource type="AudioStream" uid="uid://qwegb1h1ex2m" path="res://sounds/main themes/crystal_tokyo.mp3" id="13_y88k8"]
+[ext_resource type="TileSet" uid="uid://c1hkh8gscx8s0" path="res://other/tileset.tres" id="14_3hcmp"]
+[ext_resource type="Script" uid="uid://2bwtgtbe26jm" path="res://scripts/regular/gameplay/water.gd" id="15_3p7yf"]
+
+[node name="level5" type="Node2D" unique_id=2923122 node_paths=PackedStringArray("background_music_stream_player")]
+script = ExtResource("1_es4bw")
+background_music_stream_player = NodePath("main_sound")
+metadata/_edit_lock_ = true
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=2038356762]
+scroll_base_scale = Vector2(10, 10)
+script = ExtResource("2_3p7yf")
+layer_textures = Array[Texture2D]([ExtResource("3_vv073"), ExtResource("4_t3b6s"), ExtResource("5_xqb6r"), ExtResource("6_wx3r1"), ExtResource("7_nvf7e"), ExtResource("8_8gdro")])
+motion_scales = Array[Vector2]([Vector2(1, 1), Vector2(0.01, 0.015), Vector2(0.02, 0.015), Vector2(0.03, 0.015), Vector2(0.04, 0.015), Vector2(0.07, 0.015)])
+vertical_layers = Array[bool]([true, false, false, false, false, false, false])
+ground_layers = Array[bool]([false, true, true, true, true, true, true])
+flip_h = Array[bool]([false, true, false, false, false])
+flip_v = Array[bool]([false, true, false, false, false, false])
+layer_offsets = Array[Vector2]([Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0), Vector2(0, 0)])
+layer_scales = Array[Vector2]([Vector2(1, 1), Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1.3, 1.3), Vector2(1.5, 1.5), Vector2(2, 2)])
+enable_void = true
+void_texture = ExtResource("9_u5co3")
+void_color = Color(1, 1, 1, 1)
+void_height = 3000.0
+void_below_layer = 5
+void_motion_scale = Vector2(0.1, 0.015)
+void_render_below_layer = 1
+void_scale = Vector2(0.3, 0.3)
+void_layer_textures = Array[Texture2D]([ExtResource("10_wryk2")])
+void_layer_below_layers = Array[int]([5])
+void_layer_motion_scales = Array[Vector2]([Vector2(0.09, 0.015)])
+void_layer_flip_h = Array[bool]([false])
+void_layer_flip_v = Array[bool]([false])
+void_layer_vertical_mirror = Array[bool]([true])
+void_layer_render_below_layers = Array[int]([6])
+void_layer_offsets = Array[Vector2]([Vector2(0, -100)])
+void_layer_scales = Array[Vector2]([Vector2(1, 1)])
+
+[node name="pause" parent="." unique_id=1250592798 instance=ExtResource("11_r56l7")]
+
+[node name="blitz" parent="." unique_id=1740794090 instance=ExtResource("12_hwj6q")]
+position = Vector2(1962, -104)
+
+[node name="main_sound" type="AudioStreamPlayer" parent="." unique_id=1990091755]
+process_mode = 3
+stream = ExtResource("13_y88k8")
+max_polyphony = 5
+bus = &"Music"
+playback_type = 1
+parameters/looping = true
+
+[node name="background" type="TileMapLayer" parent="." unique_id=572763244]
+z_index = -1
+position = Vector2(-1.52588e-05, 0)
+scale = Vector2(2.5, 2.5)
+tile_set = ExtResource("14_3hcmp")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=2029963328]
+z_index = -1
+texture_filter = 1
+position = Vector2(2880, 0)
+scale = Vector2(5, 5)
+tile_map_data = PackedByteArray("AADy/wAAAgACAAUAAADy/wEAAgACAAUAAADy/wIAAgACAAUAAADy/wMAAgACAAUAAADz/wAAAgACAAUAAADz/wEAAgACAAUAAADz/wIAAgACAAUAAADz/wMAAgACAAUAAAD0/wAAAgACAAUAAAD0/wEAAgACAAUAAAD0/wIAAgACAAUAAAD0/wMAAgACAAUAAAD1/wAAAgACAAUAAAD1/wEAAgACAAUAAAD1/wIAAgACAAUAAAD1/wMAAgACAAUAAAD2/wAAAgACAAUAAAD2/wEAAgACAAUAAAD2/wIAAgACAAUAAAD2/wMAAgACAAUAAAD3/wAAAgACAAUAAAD3/wEAAgACAAUAAAD3/wIAAgACAAUAAAD3/wMAAgACAAUAAAD4/wAAAgACAAUAAAD4/wEAAgACAAUAAAD4/wIAAgACAAUAAAD4/wMAAgACAAUAAAD5/wAAAgACAAUAAAD5/wEAAgACAAUAAAD5/wIAAgACAAUAAAD5/wMAAgACAAUAAAD6/wAAAgACAAUAAAD6/wEAAgACAAUAAAD6/wIAAgACAAUAAAD6/wMAAgACAAUAAAD7/wAAAgACAAUAAAD7/wEAAgACAAUAAAD7/wIAAgACAAUAAAD7/wMAAgACAAUAAAD8/wAAAgACAAUAAAD8/wEAAgACAAUAAAD8/wIAAgACAAUAAAD8/wMAAgACAAUAAAD9/wAAAgACAAUAAAD9/wEAAgACAAUAAAD9/wIAAgACAAUAAAD9/wMAAgACAAUAAAD+/wAAAgACAAUAAAD+/wEAAgACAAUAAAD+/wIAAgACAAUAAAD+/wMAAgACAAUAAAD//wAAAgACAAUAAAD//wEAAgACAAUAAAD//wIAAgACAAUAAAD//wMAAgACAAUAAAAAAAAAAgACAAUAAAAAAAEAAgACAAUAAAAAAAIAAgACAAUAAAAAAAMAAgACAAUAAAABAAAAAgACAAUAAAABAAEAAgACAAUAAAABAAIAAgACAAUAAAABAAMAAgACAAUAAAACAAAAAgACAAUAAAACAAEAAgACAAUAAAACAAIAAgACAAUAAAACAAMAAgACAAUAAAADAAAAAgACAAUAAAADAAEAAgACAAUAAAADAAIAAgACAAUAAAADAAMAAgACAAUAAAAEAAAAAgACAAUAAAAEAAEAAgACAAUAAAAEAAIAAgACAAUAAAAEAAMAAgACAAUAAAAFAAAAAgACAAUAAAAFAAEAAgACAAUAAAAFAAIAAgACAAUAAAAFAAMAAgACAAUAAAAGAAAAAgACAAUAAAAGAAEAAgACAAUAAAAGAAIAAgACAAUAAAAGAAMAAgACAAUAAAAHAAAAAgACAAUAAAAHAAEAAgACAAUAAAAHAAIAAgACAAUAAAAHAAMAAgACAAUAAAAIAAAAAgACAAUAAAAIAAEAAgACAAUAAAAIAAIAAgACAAUAAAAIAAMAAgACAAUAAAAJAAAAAgACAAUAAAAJAAEAAgACAAUAAAAJAAIAAgACAAUAAAAJAAMAAgACAAUAAADy//f/AgACAAUAAADy//j/AgACAAUAAADy//n/AgACAAUAAADy//r/AgACAAUAAADy//v/AgACAAUAAADy//z/AgACAAUAAADy//3/AgACAAUAAADy//7/AgACAAUAAADy////AgACAAUAAADz//f/AgACAAUAAADz//j/AgACAAUAAADz//n/AgACAAUAAADz//r/AgACAAUAAADz//v/AgACAAUAAADz//z/AgACAAUAAADz//3/AgACAAUAAADz//7/AgACAAUAAADz////AgACAAUAAAA=")
+tile_set = ExtResource("14_3hcmp")
+
+[node name="water" type="Node2D" parent="." unique_id=1182036644]
+position = Vector2(4480, 32)
+script = ExtResource("15_3p7yf")
+water_size = Vector2(1590, 639.496)
+metadata/_custom_type_script = "uid://2bwtgtbe26jm"

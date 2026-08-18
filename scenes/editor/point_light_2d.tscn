@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://bbsrshlute0nv"]
+
+[ext_resource type="Texture2D" uid="uid://sao7sirt6485" path="res://sprites/light/radial.tres" id="1_l6gnj"]
+
+[sub_resource type="Gradient" id="Gradient_1ix84"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_4x4hb"]
+gradient = SubResource("Gradient_1ix84")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="PointLight2D" type="PointLight2D" unique_id=1691634895]
+position = Vector2(4705.0005, -640)
+scale = Vector2(129.53125, 25.3125)
+energy = 2.25
+shadow_enabled = true
+texture = ExtResource("1_l6gnj")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1366082196]
+range_item_cull_mask = 2
+texture = SubResource("GradientTexture2D_4x4hb")
+metadata/_edit_lock_ = true

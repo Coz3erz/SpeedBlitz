@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://de1e1gkpc7do5"]
+
+[ext_resource type="Script" uid="uid://ok4ia515x4je" path="res://scripts/regular/entities/entity_base.gd" id="1_aqybp"]
+[ext_resource type="Texture2D" uid="uid://dbr5h6pnxbbca" path="res://sprites/object sprites/icon.svg" id="2_b4ocj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_up3gn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aqybp"]
+size = Vector2(160, 131)
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=496501983]
+script = ExtResource("1_aqybp")
+is_network_synced = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=7253521]
+texture = ExtResource("2_b4ocj")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1515690069]
+scale = Vector2(6.5199986, 6.1199994)
+shape = SubResource("RectangleShape2D_up3gn")
+
+[node name="entity_hitbox" type="Area2D" parent="." unique_id=2142389632]
+collision_priority = 64.0
+priority = -3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="entity_hitbox" unique_id=1562029355]
+shape = SubResource("RectangleShape2D_aqybp")
+one_way_collision_margin = 128.0

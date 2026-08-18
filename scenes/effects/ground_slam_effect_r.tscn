@@ -1,0 +1,61 @@
+[gd_scene load_steps=7 format=3 uid="uid://tmjw2umh2g3l"]
+
+[ext_resource type="Script" uid="uid://ci14ona5ea6" path="res://scripts/regular/gameplay/effect_general.gd" id="1_pd0yq"]
+[ext_resource type="Texture2D" uid="uid://bviq56mion5vr" path="res://sprites/effect sprites/particle_orb.png" id="2_ckg2b"]
+
+[sub_resource type="Curve" id="Curve_nwnh0"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.102273, 0.595506), 0.0, 0.0, 0, 0, Vector2(0.153409, 0.258427), 0.0, 0.0, 0, 0, Vector2(0.659091, 0), 0.0, 0.0, 0, 0]
+point_count = 4
+
+[sub_resource type="Curve" id="Curve_p8kbu"]
+_data = [Vector2(0, 0.26966298), 0.0, 0.0, 0, 0, Vector2(0.14534885, 0.13483155), 0.0, 0.0, 0, 0, Vector2(1, 0.24719107), -0.13236876, -0.13236876, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_q3dww"]
+_limits = [0.0, 1.0, 0.0, 0.2267442]
+_data = [Vector2(0.06327745, 1), 0.0, 0.0, 0, 0, Vector2(0.093597904, 0.74157315), 144.8942, 144.8942, 0, 0, Vector2(0.2267442, 1), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_2o5cv"]
+colors = PackedColorArray(1, 1, 1, 1, 0.446777, 0.44677705, 0.44677705, 1)
+
+[node name="ground_slam_effect" type="Node2D"]
+scale = Vector2(16, 16)
+script = ExtResource("1_pd0yq")
+particle_active = true
+particle_one_shot = false
+particle_lifetime = 0.3
+particle_amount = 16
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(1.0774522e-05, -4.25)
+amount = 64
+texture = ExtResource("2_ckg2b")
+lifetime = 0.4
+speed_scale = 0.8
+randomness = 1.0
+use_fixed_seed = true
+seed = 285189278
+local_coords = true
+emission_shape = 1
+emission_sphere_radius = 5.29
+particle_flag_align_y = true
+direction = Vector2(0, -1)
+spread = 0.0
+gravity = Vector2(0, -1000)
+initial_velocity_max = 125.8
+angular_velocity_max = 762.65
+linear_accel_min = -0.4
+linear_accel_max = -0.4
+angle_min = -20.0
+angle_max = 38.0
+scale_amount_min = 0.1
+scale_amount_max = 0.1
+scale_amount_curve = SubResource("Curve_nwnh0")
+split_scale = true
+scale_curve_x = SubResource("Curve_p8kbu")
+scale_curve_y = SubResource("Curve_q3dww")
+color_ramp = SubResource("Gradient_2o5cv")
+
+[node name="effect_sprite" type="Sprite2D" parent="."]

@@ -1,0 +1,678 @@
+{
+	"textures": [
+		{
+			"image": "tileset2.png",
+			"size": {
+				"w": 77,
+				"h": 1601
+			},
+			"sprites": [
+				{
+					"filename": "0",
+					"region": {
+						"x": 2,
+						"y": 2,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "1",
+					"region": {
+						"x": 43,
+						"y": 2,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "2",
+					"region": {
+						"x": 2,
+						"y": 75,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "3",
+					"region": {
+						"x": 43,
+						"y": 75,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "4",
+					"region": {
+						"x": 2,
+						"y": 148,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "5",
+					"region": {
+						"x": 43,
+						"y": 148,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "6",
+					"region": {
+						"x": 2,
+						"y": 221,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "7",
+					"region": {
+						"x": 43,
+						"y": 221,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "8",
+					"region": {
+						"x": 2,
+						"y": 294,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "9",
+					"region": {
+						"x": 43,
+						"y": 294,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Barrel1",
+					"region": {
+						"x": 2,
+						"y": 367,
+						"w": 18,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Barrel2",
+					"region": {
+						"x": 43,
+						"y": 367,
+						"w": 18,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Barrel3",
+					"region": {
+						"x": 2,
+						"y": 440,
+						"w": 18,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Barrel4",
+					"region": {
+						"x": 43,
+						"y": 440,
+						"w": 18,
+						"h": 26
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Bench",
+					"region": {
+						"x": 2,
+						"y": 513,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Board1",
+					"region": {
+						"x": 43,
+						"y": 513,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Board2",
+					"region": {
+						"x": 2,
+						"y": 586,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Board3",
+					"region": {
+						"x": 43,
+						"y": 586,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Box1",
+					"region": {
+						"x": 2,
+						"y": 659,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Box2",
+					"region": {
+						"x": 43,
+						"y": 659,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Box3",
+					"region": {
+						"x": 2,
+						"y": 732,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Box4",
+					"region": {
+						"x": 43,
+						"y": 732,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Box5",
+					"region": {
+						"x": 2,
+						"y": 805,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Box6",
+					"region": {
+						"x": 43,
+						"y": 805,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Box7",
+					"region": {
+						"x": 2,
+						"y": 878,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Box8",
+					"region": {
+						"x": 43,
+						"y": 878,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Bucket",
+					"region": {
+						"x": 2,
+						"y": 951,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Fence1",
+					"region": {
+						"x": 43,
+						"y": 951,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Fence2",
+					"region": {
+						"x": 2,
+						"y": 1024,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Fence3",
+					"region": {
+						"x": 43,
+						"y": 1024,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Fire-extinguisher1",
+					"region": {
+						"x": 2,
+						"y": 1097,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Fire-extinguisher2",
+					"region": {
+						"x": 43,
+						"y": 1097,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Fire-extinguisher3",
+					"region": {
+						"x": 2,
+						"y": 1170,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Flag",
+					"region": {
+						"x": 43,
+						"y": 1170,
+						"w": 32,
+						"h": 64
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Ladder1",
+					"region": {
+						"x": 2,
+						"y": 1243,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Ladder2",
+					"region": {
+						"x": 43,
+						"y": 1243,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Ladder3",
+					"region": {
+						"x": 2,
+						"y": 1316,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Locker1",
+					"region": {
+						"x": 43,
+						"y": 1316,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Locker2",
+					"region": {
+						"x": 2,
+						"y": 1389,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Locker3",
+					"region": {
+						"x": 43,
+						"y": 1389,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Locker4",
+					"region": {
+						"x": 2,
+						"y": 1462,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Mop",
+					"region": {
+						"x": 43,
+						"y": 1462,
+						"w": 32,
+						"h": 36
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Pointer1",
+					"region": {
+						"x": 2,
+						"y": 1535,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				},
+				{
+					"filename": "Pointer2",
+					"region": {
+						"x": 43,
+						"y": 1535,
+						"w": 32,
+						"h": 32
+					},
+					"margin": {
+						"x": 0,
+						"y": 0,
+						"w": 0,
+						"h": 0
+					}
+				}
+			]
+		}
+	],
+	"meta": {
+		"app": "https://www.codeandweb.com/texturepacker",
+		"version": "1.0",
+		"smartupdate": "$TexturePacker:SmartUpdate:a73c9fdc283903ff008fddb275710aac:73e7ab452939e1be20cdd66a7b592ff3:2534be7e6bb9b77f1d4ff0f2776a0f8d$"
+	}
+}

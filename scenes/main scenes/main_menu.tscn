@@ -1,0 +1,374 @@
+[gd_scene format=3 uid="uid://c6fa0tmmqarb"]
+
+[ext_resource type="Texture2D" uid="uid://ckw5x8fiina3i" path="res://sprites/logos and UI/Logo.png" id="1_h4jmp"]
+[ext_resource type="Script" uid="uid://r58id8twx0rb" path="res://scripts/regular/GUI elements/mainmenu.gd" id="1_xtsqb"]
+[ext_resource type="Script" uid="uid://bosdxcshy6ceh" path="res://scripts/regular/GUI elements/logo.gd" id="2_3gmrm"]
+[ext_resource type="Script" uid="uid://duiywe5q0a0dj" path="res://scripts/regular/utility/parallax_background.gd" id="3_lypit"]
+[ext_resource type="Texture2D" uid="uid://dgoc8hisr77ou" path="res://sprites/city background/1.png" id="4_dsrqp"]
+[ext_resource type="Texture2D" uid="uid://cb643noatuubs" path="res://sprites/Icons/Icon_07.png" id="4_xtsqb"]
+[ext_resource type="StyleBox" uid="uid://cwo4jwqdxqgew" path="res://other/GUI_default.tres" id="5_lypit"]
+[ext_resource type="Texture2D" uid="uid://bkocvbbvy7ayt" path="res://sprites/city background/2.png" id="5_xtsqb"]
+[ext_resource type="Texture2D" uid="uid://bq8qgbjcpwl8a" path="res://sprites/city background/3.png" id="6_a4k2y"]
+[ext_resource type="Texture2D" uid="uid://boq8tmosyjkh3" path="res://sprites/city background/4.png" id="7_ko1ak"]
+[ext_resource type="Texture2D" uid="uid://jfkwxlkuvyil" path="res://sprites/city background/5.png" id="8_bq315"]
+[ext_resource type="Texture2D" uid="uid://d183j5oo6jdtb" path="res://sprites/Icons/Icon_01.png" id="8_eqxfj"]
+[ext_resource type="Texture2D" uid="uid://ccng8j6w70mu8" path="res://sprites/Icons/Icon_02.png" id="8_ko1ak"]
+[ext_resource type="Texture2D" uid="uid://brffhvrx2ikwj" path="res://Free Industrial Zone Tileset/1 Tiles/IndustrialTile_25.png" id="9_fta8b"]
+[ext_resource type="Texture2D" uid="uid://bohr15ofbtprc" path="res://sprites/Icons/Icon_08.png" id="9_gp3ao"]
+[ext_resource type="FontFile" uid="uid://cp0sso5a8wp3g" path="res://other/CyberpunkCraftpixPixel.otf" id="10_3gmrm"]
+[ext_resource type="Texture2D" uid="uid://bpl3l0irm7ef3" path="res://sprites/Icons/Icon_09.png" id="10_eqxfj"]
+[ext_resource type="Texture2D" uid="uid://bcipnnqfns73j" path="res://sprites/Icons/Icon_34.png" id="11_lypit"]
+[ext_resource type="Texture2D" uid="uid://c1i4152twt38a" path="res://sprites/Icons/Icon_14.png" id="11_nx465"]
+[ext_resource type="AudioStream" uid="uid://ct01ioe6660ry" path="res://sounds/sound effects/player/dash.sfxr" id="14_xosia"]
+[ext_resource type="PackedScene" uid="uid://dnxkepnc5m5q2" path="res://scenes/utility scenes/options.tscn" id="15_a4k2y"]
+[ext_resource type="AudioStream" uid="uid://bw5ts4k354fn1" path="res://sounds/main themes/Miami.mp3" id="17_bq315"]
+[ext_resource type="Script" uid="uid://bv5y753a7jrwq" path="res://scripts/regular/GUI elements/levelbuttons.gd" id="22_nx465"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_bq315"]
+bg_color = Color(0.2795, 0.3536, 0.65, 0.8235294)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.20999995, 0.3, 0)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0, 0, 0, 0)
+shadow_offset = Vector2(100, 0)
+anti_aliasing_size = 2.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_a4k2y"]
+bg_color = Color(0.2795, 0.3536, 0.65, 0.8235294)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.20999995, 0.3, 0)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0, 0, 0, 0)
+shadow_offset = Vector2(100, 0)
+anti_aliasing_size = 2.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ko1ak"]
+bg_color = Color(0.2795, 0.3536, 0.65, 0.43529412)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.20999995, 0.3, 0)
+border_blend = true
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0, 0, 0, 0)
+shadow_offset = Vector2(100, 0)
+anti_aliasing_size = 2.5
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nx465"]
+bg_color = Color(0.2795, 0.3536, 0.65, 0.43529412)
+border_width_left = 5
+border_width_top = 5
+border_width_right = 5
+border_width_bottom = 5
+border_color = Color(0, 0.20999995, 0.3, 0)
+border_blend = true
+corner_radius_top_left = 80
+corner_radius_top_right = 80
+corner_radius_bottom_right = 80
+corner_radius_bottom_left = 80
+expand_margin_top = 6.0
+expand_margin_bottom = 6.0
+shadow_color = Color(0, 0, 0, 0)
+shadow_offset = Vector2(100, 0)
+anti_aliasing_size = 2.5
+
+[node name="main menu" type="Node2D" unique_id=1205568455]
+
+[node name="cam" type="Node2D" parent="." unique_id=151657427]
+position = Vector2(785, -2928)
+script = ExtResource("1_xtsqb")
+
+[node name="cam" type="Camera2D" parent="cam" unique_id=1083719504]
+zoom = Vector2(0.5, 0.5)
+
+[node name="Logo" type="Sprite2D" parent="cam" unique_id=63099081]
+position = Vector2(-1324, -487)
+scale = Vector2(0.115, 0.115)
+texture = ExtResource("1_h4jmp")
+region_rect = Rect2(0, 0, 1800, 1408)
+script = ExtResource("2_3gmrm")
+
+[node name="options" type="Button" parent="cam" unique_id=217914534]
+texture_filter = 1
+offset_left = -1723.0
+offset_top = 440.0
+offset_right = -986.0
+offset_bottom = 582.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/icon_max_width = 103
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_3gmrm")
+theme_override_font_sizes/font_size = 96
+theme_override_icons/icon = ExtResource("4_xtsqb")
+theme_override_styles/normal = SubResource("StyleBoxFlat_bq315")
+theme_override_styles/pressed = ExtResource("5_lypit")
+theme_override_styles/hover = ExtResource("5_lypit")
+theme_override_styles/hover_pressed = ExtResource("5_lypit")
+theme_override_styles/disabled = ExtResource("5_lypit")
+theme_override_styles/focus = ExtResource("5_lypit")
+text = "OPTIONS"
+
+[node name="play" type="Button" parent="cam" unique_id=362416114]
+texture_filter = 1
+offset_left = -1725.0
+offset_top = 220.0
+offset_right = -988.0
+offset_bottom = 362.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/icon_max_width = 96
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_3gmrm")
+theme_override_font_sizes/font_size = 96
+theme_override_icons/icon = ExtResource("11_lypit")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4k2y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ko1ak")
+theme_override_styles/hover = ExtResource("5_lypit")
+theme_override_styles/hover_pressed = ExtResource("5_lypit")
+theme_override_styles/disabled = ExtResource("5_lypit")
+theme_override_styles/focus = ExtResource("5_lypit")
+text = "EXTRAS
+"
+icon = ExtResource("8_eqxfj")
+
+[node name="quit" type="Button" parent="cam" unique_id=751468413]
+texture_filter = 1
+offset_left = -1723.0
+offset_top = 660.0
+offset_right = -988.0
+offset_bottom = 802.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/icon_max_width = 92
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_3gmrm")
+theme_override_font_sizes/font_size = 96
+theme_override_icons/icon = ExtResource("8_ko1ak")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4k2y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ko1ak")
+theme_override_styles/hover = ExtResource("5_lypit")
+theme_override_styles/hover_pressed = ExtResource("5_lypit")
+theme_override_styles/disabled = ExtResource("5_lypit")
+theme_override_styles/focus = ExtResource("5_lypit")
+text = "QUIT"
+
+[node name="play_story" type="Button" parent="cam" unique_id=1482495885]
+texture_filter = 1
+offset_left = -1725.0
+offset_right = -988.0
+offset_bottom = 142.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/icon_max_width = 92
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_3gmrm")
+theme_override_font_sizes/font_size = 96
+theme_override_icons/icon = ExtResource("11_lypit")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4k2y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ko1ak")
+theme_override_styles/hover = ExtResource("5_lypit")
+theme_override_styles/hover_pressed = ExtResource("5_lypit")
+theme_override_styles/disabled = ExtResource("5_lypit")
+theme_override_styles/focus = ExtResource("5_lypit")
+text = "play
+"
+
+[node name="extras" type="Node2D" parent="cam" unique_id=1333824685]
+position = Vector2(-785, 2928)
+
+[node name="arcade" type="Button" parent="cam/extras" unique_id=2017965932]
+visible = false
+texture_filter = 1
+offset_left = -940.0
+offset_top = -2928.0
+offset_right = -88.0
+offset_bottom = -2786.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/icon_max_width = 79
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_3gmrm")
+theme_override_font_sizes/font_size = 93
+theme_override_icons/icon = ExtResource("9_gp3ao")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4k2y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ko1ak")
+theme_override_styles/hover = ExtResource("5_lypit")
+theme_override_styles/hover_pressed = ExtResource("5_lypit")
+theme_override_styles/disabled = ExtResource("5_lypit")
+theme_override_styles/focus = ExtResource("5_lypit")
+text = "ARCADE 
+"
+
+[node name="levels" type="Button" parent="cam/extras" unique_id=281670014]
+visible = false
+texture_filter = 1
+offset_left = -938.0
+offset_top = -2708.0
+offset_right = -86.0
+offset_bottom = -2566.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/icon_max_width = 92
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_3gmrm")
+theme_override_font_sizes/font_size = 96
+theme_override_icons/icon = ExtResource("11_lypit")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4k2y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ko1ak")
+theme_override_styles/hover = ExtResource("5_lypit")
+theme_override_styles/hover_pressed = ExtResource("5_lypit")
+theme_override_styles/disabled = ExtResource("5_lypit")
+theme_override_styles/focus = ExtResource("5_lypit")
+text = ">   levels
+"
+alignment = 0
+
+[node name="credits" type="Button" parent="cam/extras" unique_id=2140536848]
+visible = false
+texture_filter = 1
+offset_left = -938.0
+offset_top = -2489.0
+offset_right = -86.0
+offset_bottom = -2347.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/icon_max_width = 113
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_3gmrm")
+theme_override_font_sizes/font_size = 96
+theme_override_icons/icon = ExtResource("11_lypit")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4k2y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ko1ak")
+theme_override_styles/hover = ExtResource("5_lypit")
+theme_override_styles/hover_pressed = ExtResource("5_lypit")
+theme_override_styles/disabled = ExtResource("5_lypit")
+theme_override_styles/focus = ExtResource("5_lypit")
+text = "CREDITS
+"
+icon = ExtResource("10_eqxfj")
+
+[node name="back" type="Button" parent="cam/extras" unique_id=1488414959]
+visible = false
+texture_filter = 1
+offset_left = -938.0
+offset_top = -2268.0
+offset_right = -88.0
+offset_bottom = -2126.0
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/icon_max_width = 124
+theme_override_constants/align_to_largest_stylebox = 0
+theme_override_constants/line_spacing = 0
+theme_override_fonts/font = ExtResource("10_3gmrm")
+theme_override_font_sizes/font_size = 96
+theme_override_icons/icon = ExtResource("8_ko1ak")
+theme_override_styles/normal = SubResource("StyleBoxFlat_a4k2y")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_ko1ak")
+theme_override_styles/hover = ExtResource("5_lypit")
+theme_override_styles/hover_pressed = ExtResource("5_lypit")
+theme_override_styles/disabled = ExtResource("5_lypit")
+theme_override_styles/focus = ExtResource("5_lypit")
+text = " back  "
+icon = ExtResource("11_nx465")
+
+[node name="Panel" type="Panel" parent="cam" unique_id=1274372237]
+offset_left = -1670.0
+offset_top = -724.0
+offset_right = 1666.0
+offset_bottom = 711.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_nx465")
+script = ExtResource("22_nx465")
+total_levels = 60
+button_min_size = Vector2(330, 400)
+level_button_stylebox = ExtResource("5_lypit")
+level_button_font = ExtResource("10_3gmrm")
+level_button_font_size = 130
+level_outline_color = Color(0, 1, 1, 0.1882353)
+lock_icon = ExtResource("8_ko1ak")
+nav_button_stylebox = ExtResource("5_lypit")
+nav_button_font = ExtResource("10_3gmrm")
+nav_button_font_size = 70
+nav_button_min_size = Vector2(400, 150)
+nav_outline_color = Color(0, 1, 1, 0)
+nav_offset = Vector2(-300, 0)
+back_button_sound = ExtResource("14_xosia")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=919623119]
+offset = Vector2(0, -300)
+transform = Transform2D(1, 0, 0, 1, 0, -300)
+scroll_base_scale = Vector2(10, 10)
+script = ExtResource("3_lypit")
+layer_textures = Array[Texture2D]([ExtResource("4_dsrqp"), ExtResource("5_xtsqb"), ExtResource("6_a4k2y"), ExtResource("7_ko1ak"), ExtResource("8_bq315")])
+motion_scales = Array[Vector2]([Vector2(0.01, 0.015), Vector2(0.01, 0.015), Vector2(0.02, 0.015), Vector2(0.03, 0.015), Vector2(0.04, 0.015)])
+vertical_layers = Array[bool]([true, false, false, false, false])
+ground_layers = Array[bool]([false, true, true, true, true])
+flip_h = Array[bool]([false, false, false, false, false])
+flip_v = Array[bool]([false, false, false, false, false, false])
+void_texture = ExtResource("9_fta8b")
+void_below_layer = 5
+void_motion_scale = Vector2(0.1, 0.02)
+void_render_below_layer = 1
+void_layer_below_layers = Array[int]([5])
+void_layer_motion_scales = Array[Vector2]([Vector2(0.09, 0.015)])
+void_layer_flip_h = Array[bool]([false])
+void_layer_flip_v = Array[bool]([false])
+void_layer_render_below_layers = Array[int]([6])
+
+[node name="OptionsMenu" parent="." unique_id=1370012237 instance=ExtResource("15_a4k2y")]
+is_main_menu_mode = true
+fade_duration = 0.4
+
+[node name="main_menu_sound" type="AudioStreamPlayer" parent="." unique_id=848111433]
+process_mode = 3
+stream = ExtResource("17_bq315")
+bus = &"Music"
+parameters/looping = true
+
+[connection signal="pressed" from="cam/options" to="cam" method="_on_options_pressed"]
+[connection signal="pressed" from="cam/play" to="cam" method="_on_play_pressed"]
+[connection signal="pressed" from="cam/quit" to="cam" method="_on_quit_pressed"]
+[connection signal="pressed" from="cam/play_story" to="cam" method="_on_play_story_pressed"]
+[connection signal="pressed" from="cam/extras/arcade" to="cam" method="_on_arcade_pressed"]
+[connection signal="pressed" from="cam/extras/levels" to="cam" method="_on_levels_pressed"]
+[connection signal="pressed" from="cam/extras/credits" to="cam" method="_on_credits_pressed"]
+[connection signal="pressed" from="cam/extras/back" to="cam" method="_on_back_pressed"]

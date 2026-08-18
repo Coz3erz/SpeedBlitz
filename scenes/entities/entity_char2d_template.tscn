@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://iqs2wsvkcm0h"]
+
+[ext_resource type="Script" uid="uid://d2tmj82rbbpa1" path="res://scripts/regular/entities/entity_char_2d_template.gd" id="1_507lf"]
+[ext_resource type="Texture2D" uid="uid://dbr5h6pnxbbca" path="res://sprites/object sprites/icon.svg" id="2_3r7pj"]
+
+[node name="entity_sprite_handler" type="Node"]
+script = ExtResource("1_507lf")
+sprite_txt = ExtResource("2_3r7pj")
+vframes_ = 7
